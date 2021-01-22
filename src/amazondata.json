@@ -1,0 +1,40 @@
+{
+                "amazon": [
+                    {
+                        "img": "https://m.media-amazon.com/images/I/91JegIxgwML._AC_UL320_.jpg",
+						"brand":"Casio",
+						"desc": "Casio F91W-1 Classic Resin",
+                        "currentPrice": "13032",
+                        "mrpPrice": "15900",
+                        "saveAmount": "2868"
+					},
+                    {
+                       "img": "https://m.media-amazon.com/images/I/61wj7YyOmGL._AC_UL320_.jpg",
+						"brand":"SKMEI",
+						"desc": "MJSCPHBJK Mens Digital Sports Watch",
+                        "currentPrice": "9675",
+                        "mrpPrice": "12900",
+                        "saveAmount": "3225"
+                         
+                    },
+                    {
+                        "img": "https://m.media-amazon.com/images/I/71eLP4MkCFL._AC_UL320_.jpg",
+						"brand":"BOBO BIRD",
+						"desc": "BOBO BIRD Mens Luxury",
+                        "currentPrice": "7875",
+                        "mrpPrice": "10500",
+                        "saveAmount": "2625"              
+                    },
+                    {
+                        "img": "https://m.media-amazon.com/images/I/71igXs5uiZL._AC_UL320_.jpg",
+						"brand":"Tonnier",
+						"desc": "Tonnier W8479G Silver Stainless ",
+                        "currentPrice": "569",
+                        "mrpPrice": "1999",
+                        "saveAmount": "1430"               
+                    }
+                ]
+               
+                
+        }
+
