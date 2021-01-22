@@ -70,10 +70,9 @@ class Header extends React.Component{
   {
     super();
     this.state={
-      CompanyName:"Amazon",
+      CompanyName:"amazon",
       Login:"Hello,Sign in",
       Return:"Returns & Orders"
-      
     }
   }
   render()
@@ -89,15 +88,59 @@ class Header extends React.Component{
   }
 }
 
-class Cartbtn extends React.Component {
-   Addmsg= () =>{
-     alert("Brand Name "+ this.props.Brand);
-   }
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  componentDidMount() {
+    this.timer = setInterval(
+      () => this.sec(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  sec() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
   render() {
     return (
-      
-      <button style={myStyle.Cartbtn} onClick={this.Addmsg} >Add to Cart</button>
-    
+      <div>
+        <h5 style={myStyle.ClockStyle}>Time is {this.state.date.toLocaleTimeString()}</h5>
+      </div>
+    );
+  }
+}
+
+class Cartbtn extends React.Component {
+  constructor(){
+    super();
+    this.state={button:"Add to cart",count:0};
+  }
+   Addmsg= () =>{
+    this.setState({button:"Added"});
+    this.setState({count:this.state.count+1});
+   }
+   Sepmsg= () =>{
+    this.setState({count:this.state.count-1});
+   }
+  
+  render() {
+    return (
+      <div>
+      {this.state.count==0?
+      <button style={myStyle.Cartbtn} onClick={this.Addmsg.bind(this)} >{this.state.button}({this.state.count})</button>: 
+      <button style={myStyle.Cartbtn} onClick={this.Sepmsg.bind(this)} >- </button> }{this.state.count!=0? this.state.count:''}{this.state.count!=0?
+      <button style={myStyle.Cartbtn} onClick={this.Addmsg.bind(this)} >+</button>:''}
+      </div>
     );
   }
 }
@@ -134,6 +177,7 @@ function App()
   return (
     <>
     <Header/>
+    <Clock/>
     {watch.amazon.map((item, index) => (
         <Output Img={item.img} Brand={item.brand} Desc={item.desc} CurrentPrice={item.currentPrice} MrpPrice={item.mrpPrice} SaveAmount={item.saveAmount} />
     ))}
