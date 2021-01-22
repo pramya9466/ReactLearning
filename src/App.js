@@ -70,9 +70,10 @@ class Header extends React.Component{
   {
     super();
     this.state={
-      CompanyName:"amazon",
+      CompanyName:"Amazon",
       Login:"Hello,Sign in",
       Return:"Returns & Orders"
+      
     }
   }
   render()
